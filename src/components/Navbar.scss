@@ -1,0 +1,33 @@
+.navbar{
+    padding: 15px 65px 20px 65px;
+    display:flex;
+    align-items: center;
+    align-items: center;
+    color: black;
+    font-weight: 500;
+    text-decoration-line: underline;  
+    gap: 50px;
+    &_logo{
+        margin-right: auto;
+        img{
+            height: 68px;
+        }
+    }
+}
+@media (max-width:880px) {
+    .navbar{
+        font-size: 12px;
+        font-style: normal;
+        line-height: 142.6%; /* 17.112px */
+        text-decoration-line: underline;  
+      
+      &_logo{
+       
+        height: 60px;
+    
+      }
+  
+    }
+    
+  
+  }
