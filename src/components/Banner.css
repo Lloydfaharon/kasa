@@ -49,4 +49,17 @@
     width: 230px;
     height: 48px;
   }
+}
+@media (max-width: 482px) {
+  .banner {
+    margin: 0px 19px 0px 19px;
+    height: 111px;
+    flex-shrink: 0;
+  }
+  .banner_txt {
+    font-size: 24px;
+    top: 32.04%;
+    width: 230px;
+    height: 48px;
+  }
 }/*# sourceMappingURL=Banner.css.map */

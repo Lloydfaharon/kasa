@@ -7,7 +7,7 @@
   background-color: #ff6060;
   display: flex;
   align-items: baseline;
-  justify-content: end;
+  justify-content: flex-start;
   flex-direction: column-reverse;
 }
 .appartment_subtitre {
@@ -18,5 +18,5 @@
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
-  line-height: 142.6%; /* 25.668px */
+  line-height: 142.6%;
 }/*# sourceMappingURL=Appartment.css.map */

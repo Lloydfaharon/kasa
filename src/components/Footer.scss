@@ -22,5 +22,9 @@
       //@media screen and (min-width: $breakpoint-desktop) {
         //@include font(24px, 500);
     }
+    @media (max-width:482px) {
+      margin-top: 0%;
+    
+  }
     
   }

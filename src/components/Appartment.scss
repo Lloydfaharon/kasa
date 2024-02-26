@@ -7,10 +7,10 @@
     background-color: #ff6060;
     display: flex;
     align-items:baseline;
-    justify-content: end;
+    justify-content: flex-start;
     flex-direction: column-reverse;
+    
     &_subtitre{
-  
        width: 50%;
        margin: 15px 20px;
        color: #FFF;
@@ -18,7 +18,7 @@
        font-size: 18px;
        font-style: normal;
        font-weight: 700;
-       line-height: 142.6%; /* 25.668px */
+       line-height: 142.6%;
     }
    
 
