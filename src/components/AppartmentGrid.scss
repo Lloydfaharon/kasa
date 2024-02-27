@@ -7,8 +7,11 @@
     padding: 50px;
     border-radius: 25px;
     margin: 0px 65px 0px 65px;
-        
-  
+   
+    a{ 
+      text-decoration: none;
+    }
+   
     @media (max-width: 992px) {
         display: grid;
         grid-template-columns: repeat(2, 1fr);

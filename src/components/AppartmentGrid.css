@@ -9,6 +9,9 @@
   border-radius: 25px;
   margin: 0px 65px 0px 65px;
 }
+.grid a {
+  text-decoration: none;
+}
 @media (max-width: 992px) {
   .grid {
     display: grid;

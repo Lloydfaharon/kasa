@@ -9,9 +9,9 @@
     align-items:baseline;
     justify-content: flex-start;
     flex-direction: column-reverse;
-    
+   
     &_subtitre{
-       width: 50%;
+       width: 30%;
        margin: 15px 20px;
        color: #FFF;
        font-family: Montserrat;
@@ -20,6 +20,4 @@
        font-weight: 700;
        line-height: 142.6%;
     }
-   
-
 }

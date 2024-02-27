@@ -1,4 +1,5 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom';
 import "./Navbar.css";
 
 function Navbar() {
@@ -7,8 +8,12 @@ function Navbar() {
         <div className='navbar_logo'>
             <img src="./logo/logo.png" alt="logo" />
         </div>
-        <div>Accueil</div>
-        <div>A Propos</div>
+        <NavLink to = "/">
+          <div>Accueil</div>
+        </NavLink>
+        <NavLink to = "/about">
+          <div>A Propos</div>
+        </NavLink>
     </nav>
   )
 }

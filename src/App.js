@@ -8,12 +8,13 @@ import "./App.css";
 function App() {
   return (
     <div>
-      <Navbar/>
+      
       <Banner/>
       <AppartmentGrid/>
-      <Footer/>
+      
     </div>
   )
 }
-
 export default App
+
+
