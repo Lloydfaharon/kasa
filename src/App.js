@@ -1,8 +1,8 @@
 import React from 'react'
-import Navbar from './components/Navbar.js';
-import Banner from './components/Banner.js';
-import Footer from './components/Footer.js';
-import AppartmentGrid from './components/AppartmentGrid.js'
+import Navbar from './components/Navbar/Navbar.js';
+import Banner from './components/Banner/Banner.js';
+import Footer from './components/Footer/Footer.js';
+import AppartmentGrid from './components/AppartmentGrid/AppartmentGrid.js'
 import "./App.css";
 
 function App() {

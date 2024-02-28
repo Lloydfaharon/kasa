@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import Appin from './App';
-import Navbar from './components/Navbar.js';
-import Footer from './components/Footer.js';
+import App from './App';
+import Navbar from './components/Navbar/Navbar.js';
+import Footer from './components/Footer/Footer.js';
 import reportWebVitals from './reportWebVitals';
 
 import {createBrowserRouter,RouterProvider,Outlet} from "react-router-dom";
@@ -22,7 +22,7 @@ const router = createBrowserRouter([
     children:[
       {
         path: "/",
-        element:<Appin/>
+        element:<App/>
       },
       {
         path: "/about",
@@ -36,19 +36,11 @@ const router = createBrowserRouter([
         path: "/apart",
         element: (
           <>
-           
             <h1>Nos appartements</h1>
-          
           </>
         ) 
-       
       },
-
-
     ]
-    
-    
-    
   },
   
   
