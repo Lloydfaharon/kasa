@@ -1,12 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
+import App from './page/App.js';
+import AproposPage from './page/AproposPage.js'
+import ErrorPage from './page/ErrorPage.js';
+import AppartmentPage from './page/ApartmentPage.js';
 import Navbar from './components/Navbar/Navbar.js';
 import Footer from './components/Footer/Footer.js';
-import reportWebVitals from './reportWebVitals';
+import reportWebVitals from './reportWebVitals.js';
 
 import {createBrowserRouter,RouterProvider,Outlet} from "react-router-dom";
+
+//import Appartment from './components/Appartment/Appartment.js';
 
 const HeaderFooterLayout = () =>{
   return <>
@@ -15,10 +20,11 @@ const HeaderFooterLayout = () =>{
     <Footer/> 
   </>
 }
+//cree sur tout les page enfant un navbar et un footer
 const router = createBrowserRouter([
   {
     element: <HeaderFooterLayout/>,
-    errorElement:<h1>404 not found</h1>,
+    errorElement:<ErrorPage/>,
     children:[
       {
         path: "/",
@@ -26,19 +32,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/about",
-        element: (
-          <>
-           <h1>A propos</h1>
-          </>
-        ),
+        element:<AproposPage/>
       },
       {
-        path: "/apart",
-        element: (
-          <>
-            <h1>Nos appartements</h1>
-          </>
-        ) 
+        path:"/apart" ,
+        element:<AppartmentPage/> 
       },
     ]
   },

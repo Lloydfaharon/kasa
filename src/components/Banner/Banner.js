@@ -1,7 +1,7 @@
 import React from 'react'
 import "./Banner.css";
 
-function Banner() {
+export function Banner() {
   return (
     <div className="banner">
         <img className="banner_img" src="./image/bannersrc.png" alt="banner" />
@@ -11,4 +11,4 @@ function Banner() {
   )
 }
 
-export default Banner
+export default Banner;

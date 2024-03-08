@@ -25,6 +25,7 @@
 
 @media (max-width: 880px) {
   .navbar {
+    padding: 15px 65px 20px 65px;
     font-size: 12px;
     font-style: normal;
     line-height: 142.6%;
@@ -35,7 +36,7 @@
 }
 @media (max-width: 482px) {
   .navbar {
-    padding: 19px;
+    padding: 19px 20px 19px 27px;
     gap: 12px;
   }
   .navbar_logo img {

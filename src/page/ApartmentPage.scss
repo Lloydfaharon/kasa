@@ -1,0 +1,31 @@
+@use"../scss/variables.scss" as *;
+
+.apartment{
+    color:$primary-color;
+    margin: 0px 65px 0px 65px;
+  
+    &_description{
+        display: flex;
+    }
+   
+ 
+} 
+
+
+
+.apartment_description{
+    gap: 70px;
+
+}
+
+@media (max-width:482px) { //482
+    .apartment{
+        margin: 0px 19px 0px 19px;
+      
+    } 
+    .apartment_description{
+        gap: 0px;
+    
+    }
+  
+}

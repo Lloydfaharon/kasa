@@ -1,0 +1,20 @@
+.apartment {
+  color: #ff6060;
+  margin: 0px 65px 0px 65px;
+}
+.apartment_description {
+  display: flex;
+}
+
+.apartment_description {
+  gap: 70px;
+}
+
+@media (max-width: 482px) {
+  .apartment {
+    margin: 0px 19px 0px 19px;
+  }
+  .apartment_description {
+    gap: 0px;
+  }
+}/*# sourceMappingURL=ApartmentPage.css.map */

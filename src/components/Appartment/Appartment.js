@@ -2,11 +2,16 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 import "./Appartment.css";
 
-function Appartment() {
+function Appartment(props) {
+  
+  const state = {appartmentId: props.id}
+
   return (
-    <Link to = "/apart">
+    <Link to = "/apart" state={state}>
       <div className='appartment'>
-        <div className='appartment_subtitre'>Titre de la location</div>
+        <img className="appartment_img" src={props.cover} alt="banner" />
+        {/*<div className='appartment_overlay'></div>*/}
+        <h2 className='appartment_subtitre'>{props.title}</h2>
       </div>
     </Link>
   )

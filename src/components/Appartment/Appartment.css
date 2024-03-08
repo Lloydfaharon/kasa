@@ -4,19 +4,39 @@
   position: relative;
   margin-bottom: 20px;
   border-radius: 10px;
-  background-color: #ff6060;
+  overflow: hidden;
   display: flex;
   align-items: baseline;
   justify-content: flex-start;
   flex-direction: column-reverse;
+  /*&_overlay{
+      background: linear-gradient(hsla(0, 0%, 100%, 0), rgba(0, 0, 0, .502));
+      border-radius: inherit;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      width: 100%;
+  }*/
+}
+.appartment_img {
+  height: inherit;
+  width: inherit;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  border-radius: 10px;
+  z-index: 0;
+  background-color: rgb(0, 0, 0);
+  opacity: 3;
+  filter: brightness(0.7);
 }
 .appartment_subtitre {
-  width: 30%;
+  width: 37%;
   margin: 15px 20px;
   color: #FFF;
-  font-family: Montserrat;
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
   line-height: 142.6%;
+  z-index: 1;
 }/*# sourceMappingURL=Appartment.css.map */
