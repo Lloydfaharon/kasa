@@ -40,18 +40,7 @@ const router = createBrowserRouter([
       },
     ]
   },
-  
-  
-  {
-    path: "/404",
-    element: (
-      <>
-        <Navbar/>
-          <h1>404</h1>
-        <Footer/>
-      </>
-    ),
-  }
+
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

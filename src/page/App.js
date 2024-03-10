@@ -4,9 +4,10 @@ import AppartmentGrid from '../components/AppartmentGrid/AppartmentGrid.js'
 import "./App.css";
 
 function App() {
+  const imageSrc = "/image/bannersrc.png"
   return (
     <div>
-      <Banner/>
+      <Banner showText={true} imageSrc={imageSrc}/>
       <AppartmentGrid/>
     </div>
   )
