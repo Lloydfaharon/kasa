@@ -13,22 +13,24 @@ import {createBrowserRouter,RouterProvider,Outlet} from "react-router-dom";
 
 //import Appartment from './components/Appartment/Appartment.js';
 
+
+// Définit un composant qui enveloppe chaque page enfant avec la barre de navigation et le pied de page
 const HeaderFooterLayout = () =>{
   return <>
     <Navbar/>
-    <Outlet/>
+    <Outlet/>{/* Affiche le contenu de la page courante */}
     <Footer/> 
   </>
 }
 //cree sur tout les page enfant un navbar et un footer
 const router = createBrowserRouter([
   {
-    element: <HeaderFooterLayout/>,
-    errorElement:<ErrorPage/>,
+    element: <HeaderFooterLayout/>,// Utilise le composant HeaderFooterLayout pour envelopper chaque page
+    errorElement:<ErrorPage/>,//Utilise la page d'erreur en cas de route non trouvée
     children:[
       {
-        path: "/",
-        element:<App/>
+        path: "/",// Chemin pour la page d'accueil
+        element:<App/> // Utilise le composant App pour la page d'accueil
       },
       {
         path: "/about",
@@ -43,6 +45,7 @@ const router = createBrowserRouter([
 
 ]);
 
+// Rendu de l'application dans la racine du DOM
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
@@ -54,3 +57,6 @@ root.render(
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
+
+
+
