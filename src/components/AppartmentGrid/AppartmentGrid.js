@@ -1,6 +1,7 @@
 import React , {useEffect,useState}from 'react'
 import "../AppartmentGrid/AppartmentGrid.css";
 import Appartment from "../Appartment/Appartment.js";
+//import DataFichLogement from "logements.json";
 
 
 
@@ -20,11 +21,13 @@ function AppartmentGrid() {
     <div className='grid'>
       {appartments.map ((appartment) =>  ( // Parcourt la liste des appartements et crée un composant Appartment pour chaque appartement
         <Appartment 
-        title={appartment.title} 
-        pictures={appartment.pictures}
-        cover={appartment.cover} 
-        id={appartment.id} 
-      />))}
+          key={appartment.id}
+          title={appartment.title} 
+          pictures={appartment.pictures}
+          cover={appartment.cover} 
+          id={appartment.id} 
+        />
+      ))}
     </div>
   );
 }

@@ -21,6 +21,7 @@ export default function AproposPage() {
 
         {collapse.map ((collapse) =>  (
         <DescriptionAppartement
+        key={collapse.id}
         title={collapse.title} 
         content={collapse.content} 
         id={collapse.id} 

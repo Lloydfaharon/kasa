@@ -64,7 +64,21 @@
 
 @media (max-width: 482px) {
   .banner_image {
-    height: 111px;
+    height: 255px;
     margin: 0px 19px 0px 19px;
+  }
+  .arrow .arrow_left,
+  .arrow .arrow_right {
+    cursor: pointer;
+    width: 12px;
+    height: 20px;
+    transition: transform 0.3s ease;
+    z-index: 10;
+    position: relative;
+    margin: 20px;
+  }
+  .arrow .arrow_left:hover,
+  .arrow .arrow_right:hover {
+    transform: scale(1.2);
   }
 }/*# sourceMappingURL=BannerImage.css.map */

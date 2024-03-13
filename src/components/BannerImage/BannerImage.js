@@ -16,6 +16,7 @@ function BannerImage(props) {
   const goToPrevPicture = () => {
     setCurrentPictures((prevIndex) => (prevIndex === 0 ? picture.length - 1 : prevIndex - 1));
   };
+  
 
 
   return (

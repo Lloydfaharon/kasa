@@ -1,51 +1,43 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './page/App.js';
-import AproposPage from './page/AproposPage.js'
-import ErrorPage from './page/ErrorPage.js';
-import AppartmentPage from './page/ApartmentPage.js';
-import Navbar from './components/Navbar/Navbar.js';
-import Footer from './components/Footer/Footer.js';
-import reportWebVitals from './reportWebVitals.js';
+import App from './page/App';
+import AproposPage from './page/AproposPage';
+import ErrorPage from './page/ErrorPage';
+import AppartmentPage from './page/ApartmentPage';
+import Navbar from './components/Navbar/Navbar';
+import Footer from './components/Footer/Footer';
+import reportWebVitals from './reportWebVitals';
 
-import {createBrowserRouter,RouterProvider,Outlet} from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-//import Appartment from './components/Appartment/Appartment.js';
-
-
-// Définit un composant qui enveloppe chaque page enfant avec la barre de navigation et le pied de page
-const HeaderFooterLayout = () =>{
-  return <>
-    <Navbar/>
-    <Outlet/>{/* Affiche le contenu de la page courante */}
-    <Footer/> 
+const LayoutWithHeaderFooter = ({ children }) => (
+  <>
+    <Navbar />
+    {children}
+    <Footer />
   </>
-}
-//cree sur tout les page enfant un navbar et un footer
+);
+
 const router = createBrowserRouter([
   {
-    element: <HeaderFooterLayout/>,// Utilise le composant HeaderFooterLayout pour envelopper chaque page
-    errorElement:<ErrorPage/>,//Utilise la page d'erreur en cas de route non trouvée
-    children:[
-      {
-        path: "/",// Chemin pour la page d'accueil
-        element:<App/> // Utilise le composant App pour la page d'accueil
-      },
-      {
-        path: "/about",
-        element:<AproposPage/>
-      },
-      {
-        path:"/apart" ,
-        element:<AppartmentPage/> 
-      },
-    ]
+    path: "/",
+    element: <LayoutWithHeaderFooter><App /></LayoutWithHeaderFooter>,
   },
-
+  {
+    path: "/about",
+    element: <LayoutWithHeaderFooter><AproposPage /></LayoutWithHeaderFooter>,
+  },
+  {
+    path: "/apart/:id",
+    element: <LayoutWithHeaderFooter><AppartmentPage /></LayoutWithHeaderFooter>,
+  },
+  {
+    path: "*", // Cette route attrape tous les chemins non définis
+    element: <ErrorPage />, // Affiche directement la page d'erreur sans le layout
+  },
 ]);
 
-// Rendu de l'application dans la racine du DOM
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
@@ -53,9 +45,6 @@ root.render(
   </React.StrictMode>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
 
 
