@@ -1,41 +1,50 @@
 import React, { useState } from 'react';
-import './BannerImage.css';
+import './BannerImage.css'; // Importe le fichier CSS pour le style du composant
 
 function BannerImage(props) {
-  const picture = props.pictures;
-  const [currentPictures, setCurrentPictures] = useState(0);
+  const picture = props.pictures; // Récupère le tableau des images passées en prop
+  const [currentPictures, setCurrentPictures] = useState(0); // État pour gérer l'image actuellement affichée
 
+  // Fonction pour déterminer la classe CSS de chaque image
   const getClassName = (i) => {
-    if (i === currentPictures) return "visible";
+    if (i === currentPictures) return "visible"; // Si l'index de l'image correspond à l'image actuelle, elle est "visible"
+    return "hidden"; // Sinon, l'image est "cachée"
   };
 
+  // Fonction pour passer à l'image suivante
   const goToNextPicture = () => {
+    // Met à jour l'index de l'image actuelle, retourne au début si on est à la dernière image
     setCurrentPictures((prevIndex) => (prevIndex === picture.length - 1 ? 0 : prevIndex + 1));
   };
 
+  // Fonction pour revenir à l'image précédente
   const goToPrevPicture = () => {
+    // Met à jour l'index de l'image actuelle, va à la dernière image si on est à la première
     setCurrentPictures((prevIndex) => (prevIndex === 0 ? picture.length - 1 : prevIndex - 1));
   };
   
-
+  // Condition pour déterminer si la navigation (flèches/précédent, suivant) doit être affichée
+  const showNavigation = picture.length > 1;
 
   return (
     <div className='banner_image'>
-      <div className='arrow'>
-        <img className='arrow_left' src='/image/arrow_left.png' alt='fleche' onClick={goToPrevPicture} />
-        <img className='arrow_right' src='/image/arrow_right.png' alt='fleche' onClick={goToNextPicture} />
-      </div>
-      <div className='counter_container'>
-        <span className='image_counter'>{currentPictures + 1}/{picture.length}</span>
-      </div>
+      {showNavigation && (
+        <div className='arrow'>
+          <img className='arrow_left' src='/image/arrow_left.png' alt='fleche gauche' onClick={goToPrevPicture} />
+          <img className='arrow_right' src='/image/arrow_right.png' alt='fleche droite' onClick={goToNextPicture} />
+        </div>
+      )}
+      {showNavigation && (
+        <div className='counter_container'>
+          <span className='image_counter'>{currentPictures + 1}/{picture.length}</span>
+        </div>
+      )}
       
       <div className='banner_image_container'>
-        
         {picture.map((pic, i) => (
-          <img key={pic} src={pic} alt='' className={getClassName(i)} />
+          <img key={i} src={pic} alt={`Slide ${i}`} className={getClassName(i)} />
         ))}
       </div>
-      
     </div>
   );
 }
