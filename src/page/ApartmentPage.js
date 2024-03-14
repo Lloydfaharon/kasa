@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom'; // Import nécessaire pour utiliser useParams
 import './ApartmentPage.css';
@@ -40,7 +41,8 @@ export default function ApartmentPage() {
             <DescriptionAppartement title="Description" content={selectedFlat.description} />
             <DescriptionAppartement
               title="Équipement"
-              content={<ul>{selectedFlat.equipments.map((eq, index) => (
+              content={
+              <ul>{selectedFlat.equipments.map((eq, index) => (
                 <li key={index}>{eq}</li>
               ))}</ul>}
             />
@@ -50,3 +52,4 @@ export default function ApartmentPage() {
     </div>
   );
 }
+

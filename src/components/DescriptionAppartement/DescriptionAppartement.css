@@ -74,6 +74,9 @@
   }
 }
 @media (max-width: 482px) {
+  .apartment_description_section {
+    margin-bottom: 49px;
+  }
   .apartment_description_right {
     height: 20px;
     margin: 0px;

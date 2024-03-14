@@ -3,6 +3,7 @@
         //width: 988px;
         flex-basis: 50%;
         position: relative;
+        
         &.expanded {
             // Appliquez les styles lorsque la section est étendue
             .apartment_description_paragraph {
@@ -115,6 +116,9 @@
 
 
 @media (max-width:482px) {
+    .apartment_description_section{
+        margin-bottom: 49px;
+    }
     .apartment_description_right{
         height: 20px;
             

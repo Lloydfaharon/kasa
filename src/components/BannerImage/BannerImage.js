@@ -28,19 +28,26 @@ function BannerImage(props) {
 
   return (
     <div className='banner_image'>
+      {/* Affiche les flèches de navigation si nécessaire.*/}
       {showNavigation && (
         <div className='arrow'>
+          {/* Flèche gauche pour aller à l'image précédente.*/}
           <img className='arrow_left' src='/image/arrow_left.png' alt='fleche gauche' onClick={goToPrevPicture} />
+          {/* Flèche droite pour aller à l'image suivante.*/}
           <img className='arrow_right' src='/image/arrow_right.png' alt='fleche droite' onClick={goToNextPicture} />
         </div>
       )}
+  
+      {/* Affiche le compteur d'images si la navigation est activée.*/}
       {showNavigation && (
         <div className='counter_container'>
           <span className='image_counter'>{currentPictures + 1}/{picture.length}</span>
         </div>
       )}
       
+      {/* Conteneur pour les images de la bannière.*/}
       <div className='banner_image_container'>
+        {/* Génère une img pour chaque élément dans `picture`.*/}
         {picture.map((pic, i) => (
           <img key={i} src={pic} alt={`Slide ${i}`} className={getClassName(i)} />
         ))}
@@ -50,3 +57,5 @@ function BannerImage(props) {
 }
 
 export default BannerImage;
+
+
