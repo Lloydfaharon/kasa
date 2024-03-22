@@ -14,7 +14,6 @@
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
-  filter: brightness(0.8);
 }
 .banner_sombre {
   background-color: rgb(0, 0, 0);
@@ -22,7 +21,7 @@
   height: 100%;
   border-radius: 25px;
   left: 0;
-  opacity: -0.7;
+  opacity: 0.5;
   position: absolute;
   top: 0;
 }
@@ -62,5 +61,11 @@
     top: 32.04%;
     width: 230px;
     height: 48px;
+  }
+  .banner_img {
+    border-radius: 10px;
+  }
+  .banner_sombre {
+    border-radius: 10px;
   }
 }/*# sourceMappingURL=Banner.css.map */

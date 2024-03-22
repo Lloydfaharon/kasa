@@ -62,6 +62,7 @@
     
     &_container{
         //position: relative;
+       
     
        
         img{
@@ -90,28 +91,32 @@
     .banner_image{
         height: 255px;
         margin: 0px 19px 0px 19px;
+        .counter_container{
+            display: none;
+        }
+        .arrow {
+        
+
+            .arrow_left,
+            .arrow_right {
+                cursor: pointer;
+                width: 20px;
+                height: 24px;
+                transition: transform 0.3s ease;
+                z-index: 10;
+                position: relative;
+                margin: 20px;
+            }
+           
+    
+            .arrow_left:hover,
+            .arrow_right:hover {
+                transform: scale(1.2);
+            }
+        }
         
     
     }
-    .arrow {
-        
-
-        .arrow_left,
-        .arrow_right {
-            cursor: pointer;
-            width: 12px;
-            height: 20px;
-            transition: transform 0.3s ease;
-            z-index: 10;
-            position: relative;
-            margin: 20px;
-        }
-       
-
-        .arrow_left:hover,
-        .arrow_right:hover {
-            transform: scale(1.2);
-        }
-    }
-    
+   
+   
   }

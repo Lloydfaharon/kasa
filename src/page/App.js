@@ -7,7 +7,7 @@ function App() {
   const imageSrc = "/image/bannersrc.png"
   return (
     <div>
-      <Banner showText={true} imageSrc={imageSrc}/>
+      <Banner showText={true} imageSrc={imageSrc} showSombre={true}/>
       <AppartmentGrid/>
     </div>
   )

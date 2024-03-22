@@ -38,16 +38,16 @@ function BannerImage(props) {
         </div>
       )}
   
-      {/* Affiche le compteur d'images si la navigation est activée.*/}
+      
       {showNavigation && (
         <div className='counter_container'>
           <span className='image_counter'>{currentPictures + 1}/{picture.length}</span>
         </div>
       )}
       
-      {/* Conteneur pour les images de la bannière.*/}
+      
       <div className='banner_image_container'>
-        {/* Génère une img pour chaque élément dans `picture`.*/}
+        
         {picture.map((pic, i) => (
           <img key={i} src={pic} alt={`Slide ${i}`} className={getClassName(i)} />
         ))}

@@ -12,7 +12,7 @@
     height: 100%;
     object-fit: cover;
     width: 100%;
-    filter: brightness(0.8);
+    //filter: brightness(0.5);
   }
   &_sombre {
     background-color: rgba(0, 0, 0, 5);
@@ -20,7 +20,7 @@
     height: 100%;
     border-radius: 25px;
     left: 0;
-    opacity: -0.7;
+    opacity: 0.5;
     position: absolute;
     top: 0;
   }
@@ -60,6 +60,12 @@
       top: 32.04%;
       width: 230px;
       height: 48px;
+    }
+    &_img{
+      border-radius: 10px;
+    }
+    &_sombre{
+      border-radius: 10px;
     }
   }
   

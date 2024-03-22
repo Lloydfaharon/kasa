@@ -36,7 +36,7 @@ const router = createBrowserRouter([
   },
   {
     path: "*", // Route joker qui capture tous les chemins non définis
-    element: <ErrorPage />, // Affiche la page d'erreur directement sans passer par le layout avec Navbar et Footer
+    element: <LayoutWithHeaderFooter><ErrorPage /></LayoutWithHeaderFooter>, // Affiche la page d'erreur directement sans passer par le layout avec Navbar et Footer
   },
 ]);
 

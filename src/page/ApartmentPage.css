@@ -7,7 +7,7 @@
 }
 
 .apartment_description {
-  gap: 70px;
+  gap: 10px;
 }
 
 @media (max-width: 482px) {
@@ -15,6 +15,6 @@
     margin: 0px 19px 0px 19px;
   }
   .apartment_description {
-    gap: 0px;
+    gap: 10px;
   }
 }/*# sourceMappingURL=ApartmentPage.css.map */

@@ -33,7 +33,6 @@
   transition: transform 0.3s ease;
 }
 .apartment_description_section .apartment_description_paragraph {
-  display: flex;
   border-radius: 0px 0px 15px 15px;
   padding: 20px;
   align-items: flex-start;
@@ -75,13 +74,13 @@
 }
 @media (max-width: 482px) {
   .apartment_description_section {
-    margin-bottom: 49px;
+    margin-bottom: 0px;
   }
-  .apartment_description_right {
+  .apartment_description_section .apartment_description_right {
     height: 20px;
     margin: 0px;
   }
-  .apartment_description_paragraph {
+  .apartment_description_section .apartment_description_paragraph {
     margin: 0px 0px 24px 0px;
   }
 }/*# sourceMappingURL=DescriptionAppartement.css.map */
