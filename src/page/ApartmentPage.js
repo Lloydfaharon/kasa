@@ -1,16 +1,16 @@
 
 import React, { useEffect, useState } from 'react';
-import { useNavigate, useParams } from 'react-router-dom'; // Import nécessaire pour utiliser useParams
+import { useNavigate, useParams } from 'react-router-dom'; 
 import './ApartmentPage.css';
 import TitreOwner from '../components/TitreOwner/TitreOwner.js';
 import DescriptionAppartement from '../components/DescriptionAppartement/DescriptionAppartement.js';
 import BannerImage from '../components/BannerImage/BannerImage.js';
-import DataFichLogement from "./logements.json"; // Assurez-vous que le chemin est correct
+import DataFichLogement from "./logements.json"; 
 
 export default function ApartmentPage() {
-  const { id } = useParams(); // Utilisez useParams pour récupérer l'ID de l'appartement
+  const { id } = useParams(); 
   const navigate= useNavigate()
-  const [selectedFlat, setSelectedFlat] = useState(null); // État pour stocker l'appartement sélectionné
+  const [selectedFlat, setSelectedFlat] = useState(null); 
 
   useEffect(() => {
     // Trouvez l'appartement correspondant dans DataFichLogement en utilisant l'ID
@@ -18,12 +18,12 @@ export default function ApartmentPage() {
     if(!flat){
       navigate('/erroe');
     } else{
-      setSelectedFlat(flat); // Mettez à jour l'état avec l'appartement trouvé
+      setSelectedFlat(flat); 
     }
     
-  }, [id, navigate]); // Rerun quand l'ID change
+  }, [id, navigate]); 
 
-  if (!selectedFlat) return <div>... Chargement</div>; // Affichez ceci si aucun appartement n'est trouvé
+  if (!selectedFlat) return <div>... Chargement</div>; 
 
   return (
     <div>

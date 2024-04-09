@@ -5,7 +5,7 @@
 
 
 import React from 'react'
-import './TitreOwner.css' // Importe les styles spécifiques au composant.
+import './TitreOwner.css' 
 
 function TitreOwner(props) {
     return (
