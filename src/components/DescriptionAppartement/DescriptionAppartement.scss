@@ -1,134 +1,104 @@
+.apartment_description_section {
+  //width: 988px;
+  flex-basis: 50%;
+  position: relative;
 
-.apartment_description_section{
-        //width: 988px;
-        flex-basis: 50%;
-        position: relative;
-        
-        &.expanded {
-            // Appliquez les styles lorsque la section est étendue
-            .apartment_description_paragraph {
-              display: block; // Affiche le paragraphe si la section est étendue
-              max-height: 1000px; // Hauteur maximale pour afficher tout le contenu
-            }
-          }
-        .apartment_description_right{
-            //width: 100%;
-            height: 35px;
-            border-radius: 5px;
-            background: #FF6060;
-            color: white;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-size: 14px;
-            font-style: normal;
-            font-weight: 700;
-            margin: 24px 0px 0px 0px;
-            padding: 0.5em 1em;
-            z-index: 2;
-            overflow: hidden;
-            position: relative;
-            
-          
-            i{
-                font-size: 20px;
-                cursor: pointer;
-                &.rotate {
-                    transform: rotate(180deg);
-                    transition: transform 0.3s ease;
-                }
-            }
-         
-        }
-       
-        .apartment_description_paragraph{
-            
-            border-radius:0px 0px 15px 15px;
-            padding:20px;
-            align-items: flex-start;
-            gap: 10px;
-            background-color: rgba(246, 246, 246, 0.80);
-            display: flex; /* Le paragraphe est initialement caché */
-            //overflow: hidden; // Masque le contenu qui dépasse
-            max-height: 1000px; // Hauteur maximale initiale à 0
-            //transition: max-height 0.3s ease; // Animation de transition de la hauteu
-            //opacity: 1; // Commence caché
-            animation: slideDown 0.5s ease-out forwards; 
-            
+  &.expanded {
+    // Appliquez les styles lorsque la section est étendue
+    .apartment_description_paragraph {
+      display: block; // Affiche le paragraphe si la section est étendue
+      max-height: 1000px; // Hauteur maximale pour afficher tout le contenu
+    }
+  }
+  .apartment_description_right {
+    //width: 100%;
+    height: 35px;
+    border-radius: 5px;
+    background: #ff6060;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    margin: 24px 0px 0px 0px;
+    padding: 0.5em 1em;
+    z-index: 2;
+    overflow: hidden;
+    position: relative;
 
-            
-            li{
-                list-style: none;
-            }
-        }
+    i {
+      font-size: 20px;
+      cursor: pointer;
+      &.rotate {
+        transform: rotate(180deg);
+        transition: transform 0.3s ease;
+      }
+    }
+  }
 
-        
-       
+  .apartment_description_paragraph {
+    border-radius: 0px 0px 15px 15px;
+    padding: 20px;
+    align-items: flex-start;
+    gap: 10px;
+    background-color: rgba(246, 246, 246, 0.8);
+    display: flex;
+    max-height: 1000px; // Hauteur maximale initiale à 0
+    animation: slideDown 0.5s ease-out forwards;
+
+    li {
+      list-style: none;
+    }
+  }
 }
 @keyframes slideDown {
-    from {
-      max-height: 0;
-      opacity: 0;
-      transform: translateY(-80px);
-    }
-    to {
-      max-height: 500px;
-      opacity: 1;
-      transform: translateY(0);
-    }
+  from {
+    max-height: 0;
+    opacity: 0;
+    transform: translateY(-80px);
+  }
+  to {
+    max-height: 500px;
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
-
 
 @media (max-width: 992px) {
-
 }
 
+@media (max-width: 768px) {
+  //482
 
-
-@media (max-width:768px) { //482
-    
-        .apartment_description{
-            //margin: 0px 19px 0px 19px;
-            display: flex;
-            flex-direction: column;
-            gap: 1px;
-            &_right{
-                
-                height: 30px;
-                margin: 0px;
-               
-            }
-           
-        }
-    
-    .apartment_description_paragraph{
-        margin: 0px 0px 24px 0px;
-        
+  .apartment_description {
+    //margin: 0px 19px 0px 19px;
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    &_right {
+      height: 30px;
+      margin: 0px;
     }
-  
+  }
+
+  .apartment_description_paragraph {
+    margin: 0px 0px 24px 0px;
+  }
 }
 
+@media (max-width: 482px) {
+  .apartment_description_section {
+    margin-bottom: 0px;
+    .apartment_description_right {
+      height: 20px;
 
-
-
-
-
-
-@media (max-width:482px) {
-    
-    .apartment_description_section{
-        margin-bottom: 0px;
-        .apartment_description_right{
-            height: 20px;
-                
-            margin:0px;
-        }
-        
-        .apartment_description_paragraph{
-            margin: 0px 0px 24px 0px;
-            
-        }
+      margin: 0px;
     }
-    
-  
+
+    .apartment_description_paragraph {
+      margin: 0px 0px 24px 0px;
+    }
+  }
 }
